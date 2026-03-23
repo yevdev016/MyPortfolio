@@ -1,11 +1,12 @@
 .hero-section {
     display: flex;
     justify-content: space-between;
-    align-items:start;
+    align-items: start;
     color: #fff;
     padding: 10px 40px;
-    height: 80vh; 
     position: relative;
+    flex-wrap: wrap;
+    overflow: auto;
 }
 
 .hero-text {
@@ -21,24 +22,24 @@
 }
 
 .hero-text .highlight {
-    color: #0026ff; 
+    color: #0026ff;
 }
 
 .hero-text .role {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #a1a1a1; 
+    color: #a1a1a1;
     margin-top: 0;
 }
 
 .hero-text .description {
     font-size: 1.3rem;
     margin-bottom: 30px;
-    color: #ccc; 
+    color: #ccc;
 }
 
 .cta-button {
-    background-color: #5e72e400; 
+    background-color: #5e72e400;
     color: #fff;
     padding: 12px 20px;
     font-size: 1.1rem;
@@ -49,26 +50,148 @@
 }
 
 .cta-button:hover {
-    background-color: #0026ff; 
+    background-color: #0026ff;
     transform: translateY(-3px);
 }
 
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+    max-width: 600px;
+}
+
+.tech-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: default;
+    font-weight: bold;
+}
+
+.tech-badge img {
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+}
+
+.tech-badge:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #00aaff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 170, 255, 0.3);
+}
 .hero-image {
-    flex: 1;
-    max-width: 40%;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    height: 60%;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img {
+    border: 4px solid transparent;
+    background-image: linear-gradient(#000000, #000000), radial-gradient(circle, #ff0000, #00ff00, #0000ff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation: glowing-border 3s infinite linear;
+}
+
+@keyframes glowing-border {
+    0% {
+        background-image: linear-gradient(#000000, #000000), radial-gradient(circle, #ff0000, #00ff00, #0000ff);
+    }
+    25% {
+        background-image: linear-gradient(#000000, #000000), radial-gradient(circle, #00ff00, #0000ff, #ff0000);
+    }
+    50% {
+        background-image: linear-gradient(#000000, #000000), radial-gradient(circle, #0000ff, #ff0000, #00ff00);
+    }
+    75% {
+        background-image: linear-gradient(#000000, #000000), radial-gradient(circle, #ff0000, #00ff00, #0000ff);
+    }
+    100% {
+        background-image: linear-gradient(#000000, #000000), radial-gradient(circle, #00ff00, #0000ff, #ff0000);
+    }
 }
 
 
+@media screen and (max-width: 1180px) {
+    .hero-section {
+        flex-direction: row; 
+        align-items: start;
+        padding: 50px 20px; 
+    }
+
+    .hero-text {
+        max-width: 50%;
+        padding-right: 30px; 
+        text-align: left;
+    }
+
+    .hero-text h2 {
+        font-size: 2.8rem; 
+    }
+
+    .hero-text .role {
+        font-size: 1.4rem;
+    }
+
+    .hero-text .description {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        padding: 15px 25px;
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    .hero-image {
+        max-width: 45%; 
+        margin-top: 0;
+    }
+
+    .hero-image img {
+        max-width: 100%; 
+        height: auto;
+    }
+
+    .tech-stack {
+        grid-template-columns: repeat(4, 1fr); 
+        margin-top: 30px;
+    }
+
+    .tech-badge img {
+        height: 20px;
+        width: 20px;
+    }
+}
 @media screen and (max-width: 768px) {
     .hero-section {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         padding: 50px 20px;
     }
@@ -81,28 +204,63 @@
 
     .hero-text h2 {
         font-size: 2.2rem;
+        margin-top: 5px;
     }
 
     .hero-text .role {
         font-size: 1.3rem;
+        margin-bottom: 5px;
     }
 
     .hero-text .description {
         font-size: 1.1rem;
+        margin: 5px;
     }
 
     .cta-button {
-        padding: 10px 20px;
+        padding: 15px 15px;
         font-size: 1rem;
+        margin-top: 20px;
     }
 
     .hero-image {
-        max-width: 80%;
+        max-width: 100%;
         margin-top: 20px;
     }
 
     .hero-image img {
         max-width: 100%;
+        height: auto;
+    }
+
+    .tech-stack {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 5px;
+    }
+
+    .tech-badge img {
+        height: 15px;
+        width: 15px;
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-section {
+        flex-direction: column-reverse; 
+        align-items: center;
+        padding: 50px 20px;
+    }
+
+    .hero-image {
+        max-width: 50%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 50%;
+        height: auto;
     }
 }
 
