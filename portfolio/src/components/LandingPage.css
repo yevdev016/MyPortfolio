@@ -1,0 +1,134 @@
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items:start;
+    color: #fff;
+    padding: 10px 40px;
+    height: 80vh; 
+    position: relative;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 40px;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.hero-text .highlight {
+    color: #0026ff; 
+}
+
+.hero-text .role {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #a1a1a1; 
+    margin-top: 0;
+}
+
+.hero-text .description {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #ccc; 
+}
+
+.cta-button {
+    background-color: #5e72e400; 
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0026ff; 
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 40%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+@media screen and (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+    }
+
+    .hero-text {
+        text-align: center;
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .hero-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text .role {
+        font-size: 1.3rem;
+    }
+
+    .hero-text .description {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero-section {
+        padding: 120px 50px;
+    }
+
+    .hero-text h2 {
+        font-size: 3.8rem;
+    }
+
+    .hero-text .role {
+        font-size: 1.8rem;
+    }
+
+    .hero-text .description {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 15px 25px;
+        font-size: 1.3rem;
+    }
+
+    .hero-image img {
+        max-width: 90%;
+    }
+}
