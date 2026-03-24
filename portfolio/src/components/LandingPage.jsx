@@ -8,6 +8,8 @@ import node from '../assets/node.svg'
 import express from '../assets/express.png'
 import postgre from '../assets/postgre.png'
 import rest from '../assets/rest.png'
+import git from '../assets/git.png'
+import github from '../assets/github.png'
 function LandingPage() {
     return (
         <section className="hero-section">
@@ -44,6 +46,12 @@ function LandingPage() {
                     </div>
                     <div className="tech-badge">REST API
                         <img src={rest} alt="REST API" />
+                    </div>
+                    <div className="tech-badge">Git
+                        <img src={git} alt="GIT" />
+                    </div>
+                    <div className="tech-badge">Github
+                        <img src={github} alt="GIT" />
                     </div>
                 </div>
                 <button className="cta-button">View My Work</button>
