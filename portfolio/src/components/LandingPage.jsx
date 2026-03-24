@@ -54,10 +54,18 @@ function LandingPage() {
                         <img src={github} alt="GIT" />
                     </div>
                 </div>
-                <button className="cta-button">View My Work</button>
+                <div className='button-container'>
+                    <button className="cta-button">View My Work</button>
+                    <button className='resume-btn'>Resume</button>   
+                </div>
             </div>
             <div className="hero-image">
                 <img src={myImage} alt="Arvey Cura" />
+                <div className='socials-container'>
+                    <p>LinkIn</p>
+                    <p>Github</p>
+                    <p>Facebook</p>
+                </div>
             </div>
         </section>
     );

@@ -12,7 +12,7 @@ function Header() {
     return (
         <div className="header-container">
             <div className="left-panel-container">
-                <h1>yev.dev</h1>
+                <h1>Arvey Cura</h1>
             </div>
 
             <div className={`right-panel-container ${isMenuActive ? 'active' : ''}`}>
