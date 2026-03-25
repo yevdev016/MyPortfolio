@@ -6,7 +6,6 @@
     padding: 10px 40px;
     position: relative;
     flex-wrap: wrap;
-    overflow: auto;
 }
 
 .hero-text {
